@@ -1,0 +1,29 @@
+.resume-section {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('https://www.shutterstock.com/image-photo/close-view-job-interview-office-600nw-666854938.jpg')
+      center/cover no-repeat;
+  padding: 5rem 1rem;
+}
+
+.resume-card {
+  background-color: #fff;
+  color: #000;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.resume-card:hover {
+  transform: translateY(-5px);
+}
+
+.resume-icon {
+  font-size: 2rem;
+}
+
+.btn-custom {
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0.75rem 2rem;
+}
