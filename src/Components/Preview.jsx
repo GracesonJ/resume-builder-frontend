@@ -2,15 +2,18 @@ import React from 'react';
 import { GrDocumentDownload } from "react-icons/gr";
 import { FaHistory } from "react-icons/fa";
 import { Link } from 'react-router-dom';
+import Edit from './Edit';
 
 function ResumeTemplate() {
   return (
     <div className="container my-5">
+      
       {/* Action Buttons */}
       <div className="d-flex justify-content-end gap-2 mb-4">
         <button className="btn btn-outline-primary"><GrDocumentDownload /></button>
-        <button className="btn btn-outline-secondary"><FaHistory /></button>
-        <Link to="/" className="btn btn-outline-dark">Back</Link>
+        <Edit/>
+        <Link to={'/history'}><button  className="btn btn-outline-secondary"><FaHistory /></button></Link>
+        <Link to={'/'} className="btn btn-outline-dark">Back</Link>
       </div>
 
       {/* Resume Content */}

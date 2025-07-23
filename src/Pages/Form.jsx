@@ -7,10 +7,10 @@ function Form() {
     <>
       <div className="container">
         <div className="row mt-5">
-          <div className="col-6">
+          <div className="col-md-6">
             <StepperEditor/>
           </div>
-          <div className="col-6">
+          <div className="col-md-6">
             <Preview/>
           </div>
         </div>

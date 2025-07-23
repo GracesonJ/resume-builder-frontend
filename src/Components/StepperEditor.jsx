@@ -129,40 +129,49 @@ function StepperEditor() {
     };
 
     return (
-        <Box sx={{ width: '100%' }}>
-            <Stepper activeStep={activeStep} alternativeLabel>
-                {steps.map((label, index) => (
-                    <Step key={label}>
-                        <StepLabel>{label}</StepLabel>
-                    </Step>
-                ))}
-            </Stepper>
-
-            <Box sx={{ p: 4 }}>
-                {activeStep === steps.length ? (
-                    <>
-                        <Typography sx={{ mt: 2, mb: 1 }}>
-                            All steps completed — you're ready to submit!
-                        </Typography>
-                        <Box sx={{ display: 'flex', justifyContent: 'flex-end', mt: 2 }}>
-                            <Button variant="contained" color="success" onClick={handleReset}>
-                                Submit
-                            </Button>
-                        </Box>
-                    </>
-                ) : (
-                    <>
-                        {renderStepContent(activeStep)}
-                        <Box sx={{ display: 'flex', justifyContent: 'space-between', mt: 4 }}>
-                            <Button disabled={activeStep === 0} onClick={handleBack}>Back</Button>
-                            <Button variant="contained" onClick={handleNext}>
-                                {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
-                            </Button>
-                        </Box>
-                    </>
-                )}
+        <div className='container'>
+            <div className="row">
+                <div className="col-md-1"></div>
+                <div className="col-md-10">
+                    <Box sx={{ width: '100%' }}>
+                <Stepper activeStep={activeStep} alternativeLabel>
+                    {steps.map((label, index) => (
+                        <Step key={label}>
+                            <StepLabel>{label}</StepLabel>
+                        </Step>
+                    ))}
+                </Stepper>
+    
+                <Box sx={{ p: 4 }}>
+                    {activeStep === steps.length ? (
+                        <>
+                            <Typography sx={{ mt: 2, mb: 1 }}>
+                                All steps completed — you're ready to submit!
+                            </Typography>
+                            <Box sx={{ display: 'flex', justifyContent: 'flex-end', mt: 2 }}>
+                                <Button variant="contained" color="success" onClick={handleReset}>
+                                    Submit
+                                </Button>
+                            </Box>
+                        </>
+                    ) : (
+                        <>
+                            {renderStepContent(activeStep)}
+                            <Box sx={{ display: 'flex', justifyContent: 'space-between', mt: 4 }}>
+                                <Button disabled={activeStep === 0} onClick={handleBack}>Back</Button>
+                                <Button variant="contained" onClick={handleNext}>
+                                    {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
+                                </Button>
+                            </Box>
+                        </>
+                    )}
+                </Box>
             </Box>
-        </Box>
+                </div>
+                <div className="col-md-1"></div>
+            </div>
+            
+        </div>
     );
 }
 
